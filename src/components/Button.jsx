@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Button = ({ text, className }) => {
+const Button = ({ text, className, btnLink }) => {
     return (
-        <button className={className}>
-            {text}
-        </button>
+        <a href={btnLink}>
+            <button className={className}>
+                {text}
+            </button>
+        </a>
+
     )
 }
 
