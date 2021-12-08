@@ -7,7 +7,7 @@ const MobileMenu = ( { className, icon, onNavClick, links, navOpen } ) => {
         "menu": menuIcon,
         "closeMenu": closeMenuIcon
     }
-    console.log(icons, icon, className)
+    
     return (
         <div className={`mobile-nav ${navOpen && "navOpen"}`}>
             <img 
