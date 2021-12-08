@@ -9,7 +9,7 @@ const MobileMenu = ( { className, icon, onNavClick, links, navOpen } ) => {
     }
     console.log(icons, icon, className)
     return (
-        <div className='mobile-nav'>
+        <div className={`mobile-nav ${navOpen && "navOpen"}`}>
             <img 
                 src={icons[icon]} 
                 alt="Menu Toggle Button" 
@@ -17,7 +17,7 @@ const MobileMenu = ( { className, icon, onNavClick, links, navOpen } ) => {
                 onClick={onNavClick}
             />
             {navOpen &&
-                <ul className='nav-list'>
+                <ul className='nav-list mobileOnly'>
                     <li className='nav-list-item'><a href={links["bookLink"]}>BOOK ONLINE</a></li>
                     <li className='nav-list-item'><a href={links["contactLink"]}>CONTACT</a></li>
                     <li className='nav-list-item'><a href="">REPORT AN ISSUE</a></li>

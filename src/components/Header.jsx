@@ -23,7 +23,7 @@ const Header = () => {
             <div className="header-left">
                 <img src={logo} alt="Cloverleaf Audio Logo" className="logo"/>
             </div>
-            <div className="header-right">
+            <div className={`header-right ${ navOpen && 'navOpen'}`}>
                 <Button 
                     className="header-btns" 
                     text="BOOK ONLINE" 
