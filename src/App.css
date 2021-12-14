@@ -94,16 +94,12 @@ button {
     transition: 0.3s;
   }
 
-  .navOpen {
-    
-  }
-
   .nav-list {
     position: absolute;
     text-align: right;
     text-decoration: none;
     list-style-type: none;
-    transform: translateX(-55%);
+    transform: translateX(-75%);
     
   }
 
@@ -111,10 +107,14 @@ button {
     display: inline-block;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    width: 200px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: rgb(243, 243, 243);
     margin-bottom: 1em;
     padding-right: 5px;
     background-image: linear-gradient(to right, rgba(248, 248, 248, 0), rgb(126, 126, 126));
+    background-image: linear-gradient(to right, rgba(248, 248, 248, 0), rgb(126, 126, 126) 60%, rgb(126, 126, 126) 99%, rgba(248, 248, 248, 0));
     animation: fadeIn linear .2s;
     -webkit-animation: fadeIn linear .2s;
     -moz-animation: fadeIn linear .2s;

@@ -4,7 +4,8 @@ import Divider from './components/Divider.jsx'
 import Header from './components/Header.jsx'
 import FixedListComboBox from './components/FixedListComboBox.jsx'
 import Welcome from './components/Welcome'
-import ProjectDetails from './components/ProjectDetails';
+import ProjectDetails from './components/ProjectDetails'
+import FileContainer from './components/FileContainer'
 
 function App() {
 
@@ -47,6 +48,8 @@ function App() {
       <FixedListComboBox projectList={projects} selected={project} onChangeProject={changeProject}/>
       <Divider />
       <ProjectDetails />
+      <Divider />
+      <FileContainer />
     </div>
   );
 }
