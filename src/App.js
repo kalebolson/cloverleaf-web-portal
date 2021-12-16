@@ -46,7 +46,7 @@ function App() {
   }
 
   const fetchName = async () => {
-    const res = await fetch(`http://localhost:5000/api/misc/name/${userID}`)
+    const res = await fetch(`/api/misc/name/${userID}`)
     const data = await res.json()
     return data
   }
