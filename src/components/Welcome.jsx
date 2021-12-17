@@ -1,8 +1,9 @@
 
 function Welcome({ clientName }) {
-
+    const firstName = clientName && clientName.split(' ')[0]
+    
     return (
-        <h1 className='welcome-header'>Welcome, {clientName}!</h1>
+        <h1 className='welcome-header'>Welcome, {firstName}!</h1>
     )
 }
 

@@ -11,7 +11,6 @@ function App() {
 
   //placeholder data, replace all of this with a call to the back end
   const userID = "matthewgrosso95" //Replace this with a url parameter OR pass from authentication somehow
-  const projects = ["first project", "new album", "music video"]
   const fileplaceholder = [
     { 
       'title': 'song 1',
@@ -35,6 +34,7 @@ function App() {
 
   //Setting States
   const [project, setProject] = useState()
+  const [projects, setProjects] = useState(["first project", "new album", "music video"])
   const [clientName, setClientName] = useState()
   const [files, setFiles] = useState(fileplaceholder)
 
@@ -50,14 +50,27 @@ function App() {
     const data = await res.json()
     return data
   }
+  const fetchProjects = async() => {
+    const res = await fetch(`api/projects/at/${userID}`)
+    const data = await res.json()
+    const projNames = data.map(obj => obj['Project Name'])
 
-    
+    return projNames
+  }
+
+  // Getting name and projects with useeffect with empty bracket dependencies
+  // These will only need to be rendered once, on page load.
   useEffect(() => {
     const getName = async () => {
       const nameFromServer = await fetchName()
       setClientName(nameFromServer)
     }
-
+    const getProjects = async () => {
+      const projectsFromServer = await fetchProjects()
+      setProjects(projectsFromServer)
+    }
+    
+    getProjects()
     getName()
   }, [])
 
